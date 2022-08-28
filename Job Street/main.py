@@ -3,6 +3,8 @@ import json
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import schedule
+import time
 
 def extract(page):
     headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
@@ -47,3 +49,5 @@ df.to_excel('jobs.xlsx')
 with open(f'joblist_{datetime.now().date()}.json', 'w+', encoding="utf-8") as outfile:
     outfile.write(json.dumps(job_dict))
     outfile.close()
+
+schedule.every().hour.do(transform)

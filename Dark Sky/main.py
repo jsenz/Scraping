@@ -6,7 +6,7 @@ from datetime import datetime, time
 
 LOCATION = "-6.135200,106.813301"
 
-RAPIDAPI_KEY  = "faa1f86491mshdeb3ce2681f116dp1ba6a9jsn87bf103bfabe"
+RAPIDAPI_KEY  = <Rapid_Api_key>
 
 def trigger_api():
 
@@ -15,7 +15,7 @@ def trigger_api():
   querystring = {"lang":"en","units":"auto"}
 
   headers = {
-    'X-RapidAPI-Key': "faa1f86491mshdeb3ce2681f116dp1ba6a9jsn87bf103bfabe",
+    'X-RapidAPI-Key': <Rapid_Api_key>,
     'X-RapidAPI-Host': "dark-sky.p.rapidapi.com"
     }
 
